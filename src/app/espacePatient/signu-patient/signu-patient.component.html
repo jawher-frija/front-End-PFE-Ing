@@ -1,0 +1,262 @@
+<body class=" login_page">
+
+    <div class="container-fluid">
+        <div class="login-wrapper row">
+            <div id="login" class="login loginpage col-lg-offset-2 col-md-offset-3 col-sm-offset-3 col-xs-offset-0 col-xs-12 col-sm-6 col-lg-8">    
+               
+   
+   <div class="login-form-header " style="margin-top: 6rem;text-align: center;z-index: 1;">
+          <img src="assets/data/icons/signup.png" alt="login-icon" style="max-width:64px">
+          <div class="login-header">
+              <h4 class="bold color-white">Signup Now!</h4>
+              <h4><small>Please enter your data to register.</small></h4>
+          </div>
+     </div>
+   <div class="container-fluid" style="margin-top: 3rem;width:88rem;margin-left: -8rem;">
+    
+      <div class="row">
+          <div id="login" class="login loginpage col-lg-offset-2 col-md-offset-3 col-sm-offset-3 col-xs-offset-0 col-xs-12 col-sm-6 col-lg-8">    
+             
+             
+              <div class="box login">
+  
+                  <div class="content-body" style="padding-top:40px" style="height:auto">
+  
+                      <form [formGroup]="signupform" (ngSubmit)="signUpPatient()" id="msg_validate"  novalidate="novalidate" class="no-mb no-mt">
+                          <div class="row">
+                              <div class="col-xs-12">
+  
+                                  <div class="col-lg-6 no-pl">
+                                      <div class="form-group">
+                                          <label class="form-label">Nom</label>
+                                          <div class="controls">
+                                              <input type="text" class="form-control" id="inputNom" placeholder="username"formControlName="username"  required autocomplete="off">
+                                          </div>
+                                          <div
+                                          *ngIf="
+                                          signupform.controls['username'].invalid &&
+                                        (signupform.controls['username'].dirty ||
+                                        signupform.controls['username'].touched)
+                                      "
+                                          class=""
+                                          style="color: red; margin-top: 0.2rem"
+                                        >
+                                          <div *ngIf="signupform.controls['username'].errors?.['required']"  >
+                                            <!-- controle de saisir -->
+                                            le nom est obligatoire !.
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                  
+  
+                                  <div class="col-lg-6 no-pr">
+                                      <div class="form-group">
+                                          <label class="form-label">Email</label>
+                                          <div class="controls">
+                                              <input type="text" class="form-control" id="inputEmail" placeholder="email" formControlName="email"  required autocomplete="off">
+                                          </div>
+                                          <div
+                                          *ngIf="
+                                          signupform.controls['email'].invalid &&
+                                        (signupform.controls['email'].dirty ||
+                                        signupform.controls['email'].touched)
+                                      "
+                                          class=""
+                                          style="color: red; margin-top: 0.2rem"
+                                        >
+                                          <div *ngIf="signupform.controls['email'].errors?.['required']"  >
+                                            <!-- controle de saisir -->
+                                            l'email est obligatoire !.
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="col-lg-6 no-pl">
+                                    <div class="form-group">
+                                        <label class="form-label">Age</label>
+                                        <div class="controls">
+                                            <input type="number" class="form-control" id="inputAge" placeholder="age" formControlName="age"  required autocomplete="off">
+                                        </div>
+                                        <div
+                                        *ngIf="
+                                        signupform.controls['age'].invalid &&
+                                      (signupform.controls['age'].dirty ||
+                                      signupform.controls['age'].touched)
+                                    "
+                                        class=""
+                                        style="color: red; margin-top: 0.2rem"
+                                      >
+                                        <div *ngIf="signupform.controls['age'].errors?.['required']"  >
+                                          <!-- controle de saisir -->
+                                          l'age est obligatoire !.
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                  
+                                  <div class="col-lg-6 no-pr">
+                                    <div class="form-group">
+                                        <label class="form-label">Carte d'identité</label>
+                                        <div class="controls">
+                                            <input type="text" class="form-control" id="inputCarte" placeholder="CIN" formControlName="cinCarte"  required autocomplete="off">
+                                        </div>
+                                        <div
+                                        *ngIf="
+                                        signupform.controls['cinCarte'].invalid &&
+                                      (signupform.controls['cinCarte'].dirty ||
+                                      signupform.controls['cinCarte'].touched)
+                                    "
+                                        class=""
+                                        style="color: red; margin-top: 0.2rem"
+                                      >
+                                        <div *ngIf="signupform.controls['cinCarte'].errors?.['required']"  >
+                                          <!-- controle de saisir -->
+                                          le CIN est obligatoire !.
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+  
+                                  <div class="col-lg-6 no-pl">
+                                      <div class="form-group">
+                                          <label class="form-label">Password</label>
+                                          <div class="controls">
+                                              <input formControlName="password" type="password" class="form-control" name="formfield1" placeholder="password">
+                                          </div>
+                                          <div
+                                          *ngIf="
+                                          signupform.controls['password'].invalid &&
+                                        (signupform.controls['password'].dirty ||
+                                        signupform.controls['password'].touched)
+                                      "
+                                          class=""
+                                          style="color: red; margin-top: 0.2rem"
+                                        >
+                                          <div *ngIf="signupform.controls['password'].errors?.['required']"  >
+                                            <!-- controle de saisir -->
+                                            le password est obligatoire !.
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+  
+                                  <div class="col-lg-6 no-pr">
+                                      <div class="form-group">
+                                          <label class="form-label">Repeat Password</label>
+                                          <div class="controls">
+                                              <input type="password" class="form-control" name="formfield2" formControlName="repeatPass" placeholder="repeat password">
+                                          </div>
+                                          <div
+                                          *ngIf="
+                                          signupform.controls['repeatPass'].invalid &&
+                                        (signupform.controls['repeatPass'].dirty ||
+                                        signupform.controls['repeatPass'].touched)
+                                      "
+                                          class=""
+                                          style="color: red; margin-top: 0.2rem"
+                                        >
+                                          <div *ngIf="signupform.controls['repeatPass'].errors?.['required']"  >
+                                            <!-- controle de saisir -->
+                                            le password est obligatoire !.
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+  
+                                  <div class="col-lg-6 no-pl">
+                                      <div class="form-group">
+                                          <label class="form-label">Adresse</label>
+                                          <div class="controls">
+                                              <input type="text" class="form-control" id="inputAdresse" placeholder="adresse"formControlName="adresse"  required autocomplete="off">
+                                          </div>
+                                          <div
+                                          *ngIf="
+                                          signupform.controls['adresse'].invalid &&
+                                        (signupform.controls['adresse'].dirty ||
+                                        signupform.controls['adresse'].touched)
+                                      "
+                                          class=""
+                                          style="color: red; margin-top: 0.2rem"
+                                        >
+                                          <div *ngIf="signupform.controls['adresse'].errors?.['required']"  >
+                                            <!-- controle de saisir -->
+                                            l'adresse est obligatoire !.
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+  
+                                  <div class="col-lg-6 no-pr">
+                                      <div class="form-group">
+                                          <label class="form-label">Telephone</label>
+                                          <div class="controls">
+                                              <input type="text" class="form-control" id="telephone" formControlName="telephone"  required autocomplete="off">
+                                          </div>
+                                          <div
+                                          *ngIf="
+                                          signupform.controls['telephone'].invalid &&
+                                        (signupform.controls['telephone'].dirty ||
+                                        signupform.controls['telephone'].touched)
+                                      "
+                                          class=""
+                                          style="color: red; margin-top: 0.2rem"
+                                        >
+                                          <div *ngIf="signupform.controls['telephone'].errors?.['required']"  >
+                                            <!-- controle de saisir -->
+                                            le telephone est obligatoire !.
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+  
+                                  <div class="form-group col-md-4" >
+                                      <label for="genre" >Sexe</label>
+  
+                                      <input type="radio" name="genre" value="MALE" id="genre"  formControlName="genre" > Homme
+                                       <input type="radio" name="genre" value="FEMALE"  formControlName="genre"> Femme
+                          
+                                     </div>
+  
+                                  
+                                  <div class="col-lg-6 " style="margin-left: 9rem;">
+                                      <div class="form-group">
+                                          <label class="form-label">Image</label>
+                                          <div class="controls">
+                                         
+                                              <input type="file">
+                                  
+  
+                                          </div>
+                                      </div>
+                                  </div>
+                                
+                                  </div>                     
+                                 
+  
+                                  <div class="" style="margin-left: 2rem;">
+                                      <button type="submit" class="btn btn-primary mt-10 btn-corner right-15">Sign up</button>
+                                      <a href="/login" class="btn mt-10 btn-corner signup">Login</a>
+                                  </div>
+  
+                              
+                          </div>
+                      </form>
+                <p id="nav" style="margin-top:2rem;">
+                  <a class="pull-left" href="#" title="Password Lost and Found" style="color:grey ;">Forgot password?</a>
+                  <a class="pull-right" href="4444" title="Sign Up" style="color:grey ;">Login</a>
+                </p>
+  
+                  </div>
+              </div>
+  
+             
+  
+          </div>
+      </div>
+  </div>
+  
+  
+  

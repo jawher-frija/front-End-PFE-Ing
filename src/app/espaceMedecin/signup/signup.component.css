@@ -1,0 +1,45 @@
+.parcours{
+   
+    display: flex;
+    justify-content: space-around;
+}
+body{
+    height: auto;
+    background-color: #fafcfe;
+}
+.btns .btnAdd{
+    width: 12rem;
+    height: 2rem;
+    border-radius: 8px;
+    border: none;
+    margin-left: 2rem;
+    background-color: #4d9cf8;
+    color: white;
+    
+
+}
+.btns .btnSupp{
+    width: 12rem;
+    height: 2rem;
+    border-radius: 8px;
+    border: 1px solid #4d9cf8 ;
+    
+    background-color:transparent;
+    color: #4d9cf8;
+
+}
+.btns .btnAdd:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: #4d9cf8;
+    transition: 1s;
+    border: 1px solid #4d9cf8 ;
+
+}
+.btns .btnSupp:hover{
+    cursor: pointer;
+    background-color:#4d9cf8 ;
+    color:white ;
+    transition: 1s;
+
+}

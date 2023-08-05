@@ -1,0 +1,74 @@
+<body class=" login_page">
+
+    <div class="container-fluid" style="margin-top: 4rem" >
+        <div class="login-wrapper row" style="height: 42rem" >
+            <div id="login" class="login loginpage col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-0 col-xs-12 col-sm-6 col-lg-6">    
+                <div class="login-form-header">
+                     <img src="assets/data/icons/padlock.png" alt="login-icon" style="max-width:64px">
+                     <div class="login-header">
+                         <h4 class="bold color-white">Login Now!</h4>
+                         <h4><small>Please enter your credentials to login.</small></h4>
+                     </div>
+                </div>
+           
+            <div class="box login">
+
+                <div class="content-body" style="padding-top:30px">
+
+                    <form [formGroup]="loginform"  class="no-mb no-mt">
+                        <div class="row">
+                            <div class="col-xs-12">
+
+                                <div class="form-group">
+                                    <label class="form-label">Username</label>
+                                    <div class="controls">
+                                        <input formControlName="username" type="text" class="form-control"  placeholder="username">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Password</label>
+                                    <div class="controls">
+                                        <input formControlName="password" type="password" class="form-control" placeholder="password">
+                                    </div>
+                                </div>
+
+                                <div class="pull-left">
+                                    <a (click)="onSubmit()" class="btn btn-primary mt-10 btn-corner right-15">Log in</a>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <p id="nav">
+                <a class="pull-left" href="#" title="Password Lost and Found">Forgot password?</a>
+                <a class="pull-right" data-toggle="modal" href="#cmpltadminModal-10">Sign Up</a>
+                
+            </p>
+          
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- modal start -->
+<div class="modal fade col-xs-12" id="cmpltadminModal-10" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog animated fadeInDown">
+        <div class="modal-content">
+        
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-success" routerLink="/signuppatient" type="button">Patient</button>
+                <button data-dismiss="modal"class="btn btn-success" type="button" routerLink="/signupMedecin" (click)="addRole()">Medecin</button>
+            </div>
+        </div>
+    </div>
+</div>
+
